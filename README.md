@@ -8,6 +8,6 @@ $ bundle install
 
 ## ローカルで起動
 
-```
+```shell
 $ rails s
 ```
