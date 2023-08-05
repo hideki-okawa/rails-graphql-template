@@ -38,7 +38,7 @@ VSCode + Prettier + RuboCop の利用を前提としている。RuboCopで設定
 
 ### バージョン
 
-- VSCode: 1.80.2 ※動作確認バージョン
+VSCode: 1.80.2 ※動作確認バージョン
 
 ### 1. VSCodeにPrettier拡張を入れる
 
