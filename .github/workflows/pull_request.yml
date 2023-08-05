@@ -35,6 +35,6 @@ jobs:
         uses: reviewdog/action-rubocop@v2
         with:
           rubocop_version: gemfile
-          rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
+          rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile rubocop-factory_bot:gemfile rubocop-graphql:gemfile
           reporter: github-pr-review
           fail_on_error: true
