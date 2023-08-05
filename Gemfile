@@ -27,6 +27,15 @@ group :development do
   gem 'web-console'
 end
 
+group :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails', '~> 6.0'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
+end
+
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
