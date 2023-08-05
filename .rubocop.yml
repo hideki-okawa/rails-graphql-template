@@ -6,3 +6,12 @@ require:
   - rubocop-rspec
   - rubocop-factory_bot
   - rubocop-graphql
+
+Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Naming/MethodParameterName:
+  Enabled: false
