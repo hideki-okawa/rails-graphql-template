@@ -1,64 +1,32 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
+ruby '3.2.2'
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.6"
-
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
-
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
-
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
-
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
-
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
-
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-
-# Use Sass to process CSS
-# gem "sassc-rails"
-
-gem "graphql", "~> 2.0.24"
-
-group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
-end
+gem 'bootsnap', require: false
+gem 'graphql', '~> 2.0.24'
+gem 'jbuilder'
+gem 'puma', '~> 5.0'
+gem 'rails', '~> 7.0.6'
+gem 'sprockets-rails'
+gem 'sqlite3', '~> 1.4'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
-
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
-
+  gem 'graphiql-rails'
+  gem 'prettier_print'
   gem 'rubocop', '~> 1.55', require: false
   gem 'rubocop-factory_bot', '~> 2.22', require: false
   gem 'rubocop-graphql', '~> 1.0', require: false
   gem 'rubocop-rails', '~> 2.11', require: false
   gem 'rubocop-rspec', '~> 2.1', require: false
-  gem 'prettier_print'
   gem 'syntax_tree'
   gem 'syntax_tree-haml'
   gem 'syntax_tree-rbs'
+  gem 'web-console'
 end
 
-gem "graphiql-rails", group: :development
+group :development, :test do
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
+end
