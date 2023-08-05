@@ -3,7 +3,7 @@ class RailsGraphqlTemplateSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
 
-  max_complexity 100
+  max_complexity 200
   max_depth 20
 
   # For batch-loading (see https://graphql-ruby.org/dataloader/overview.html)
