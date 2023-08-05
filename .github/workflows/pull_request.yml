@@ -14,10 +14,14 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Detect ruby version
+        id: ruby-version
+        run: echo "::set-output name=VERSION::$(cat .ruby-version)"
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2.2
+          ruby-version: '${{ steps.ruby-version.outputs.VERSION }}'
 
       - name: Set up Node
         uses: volta-cli/action@v4
@@ -32,5 +36,5 @@ jobs:
         with:
           rubocop_version: gemfile
           rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
-          reporter: github-pr-review # Default is github-pr-check
+          reporter: github-pr-review
           fail_on_error: true
