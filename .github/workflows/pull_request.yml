@@ -1,0 +1,40 @@
+name: reviewdog
+
+on: [pull_request]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  rubocop:
+    name: runner / rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Detect ruby version
+        id: ruby-version
+        run: echo "::set-output name=VERSION::$(cat .ruby-version)"
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '${{ steps.ruby-version.outputs.VERSION }}'
+
+      - name: Set up Node
+        uses: volta-cli/action@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: rubocop
+        uses: reviewdog/action-rubocop@v2
+        with:
+          rubocop_version: gemfile
+          rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile rubocop-factory_bot:gemfile rubocop-graphql:gemfile
+          reporter: github-pr-review
+          fail_on_error: true
