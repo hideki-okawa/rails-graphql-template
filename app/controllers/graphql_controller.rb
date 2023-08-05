@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class GraphqlController < ApplicationController
   # If accessing from outside this domain, nullify the session
   # This allows for outside API access while preventing CSRF attacks,
@@ -15,9 +16,9 @@ class GraphqlController < ApplicationController
     result =
       RailsGraphqlTemplateSchema.execute(
         query,
-        variables: variables,
-        context: context,
-        operation_name: operation_name,
+        variables:,
+        context:,
+        operation_name:,
       )
     render json: result
   rescue StandardError => e
