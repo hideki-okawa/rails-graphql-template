@@ -37,7 +37,7 @@ module RailsGraphqlTemplate
 
     config.generators.after_generate do |files|
       system(
-        'bundle exec rubocop --auto-correct-all ' + files.join(' '),
+        "bundle exec rubocop --auto-correct-all #{files.join(' ')}",
         exception: true,
       )
     end
