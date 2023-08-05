@@ -49,6 +49,16 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem 'rubocop', '~> 1.55', require: false
+  gem 'rubocop-factory_bot', '~> 2.22', require: false
+  gem 'rubocop-graphql', '~> 1.0', require: false
+  gem 'rubocop-rails', '~> 2.11', require: false
+  gem 'rubocop-rspec', '~> 2.1', require: false
+  gem 'prettier_print'
+  gem 'syntax_tree'
+  gem 'syntax_tree-haml'
+  gem 'syntax_tree-rbs'
 end
 
 gem "graphiql-rails", group: :development
