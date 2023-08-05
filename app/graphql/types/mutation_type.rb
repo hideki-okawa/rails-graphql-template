@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 module Types
   class MutationType < Types::BaseObject
+    description 'The mutation root of this schema'
+
     # TODO: remove me
     field :test_field,
           String,

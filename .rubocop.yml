@@ -1,11 +1,15 @@
 inherit_from:
   # - .rubocop_todo.yml
   - node_modules/@prettier/plugin-ruby/rubocop.yml
+
 require:
   - rubocop-rails
   - rubocop-rspec
   - rubocop-factory_bot
   - rubocop-graphql
+
+AllCops:
+  NewCops: enable
 
 Documentation:
   Enabled: false
@@ -14,4 +18,7 @@ Metrics/MethodLength:
   Max: 20
 
 Naming/MethodParameterName:
+  Enabled: false
+
+Style/IfUnlessModifier:
   Enabled: false
