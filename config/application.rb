@@ -35,6 +35,8 @@ module RailsGraphqlTemplate
     # Don't generate system test files.
     config.generators.system_tests = nil
 
+    config.generators { |g| g.test_framework :rspec }
+
     config.generators.after_generate do |files|
       system(
         "bundle exec rubocop --auto-correct-all #{files.join(' ')}",
