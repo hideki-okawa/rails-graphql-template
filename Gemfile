@@ -14,6 +14,7 @@ gem 'sqlite3', '~> 1.4'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development do
+  gem 'annotate'
   gem 'graphiql-rails'
   gem 'prettier_print'
   gem 'rubocop', '~> 1.55', require: false
