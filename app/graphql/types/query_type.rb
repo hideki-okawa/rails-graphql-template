@@ -13,5 +13,13 @@ module Types
     def sample_connection
       Sample.all
     end
+
+    field :sample, Types::SampleType, null: true do
+      description 'サンプルを取得する'
+      argument :id, ID, required: true
+    end
+    def sample(id:)
+      Sample.find(id)
+    end
   end
 end
