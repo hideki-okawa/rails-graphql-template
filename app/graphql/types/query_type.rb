@@ -10,6 +10,12 @@ module Types
     field :sample_connection, Types::SampleType.connection_type, null: false do
       description 'サンプル一覧を取得する'
     end
+
+    field :sample, Types::SampleType, null: true do
+      description 'サンプルを取得する'
+      argument :id, ID, required: true
+    end
+
     def sample_connection
       Sample.all
     end
