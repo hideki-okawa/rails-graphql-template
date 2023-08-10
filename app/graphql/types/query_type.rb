@@ -13,23 +13,13 @@ module Types
 
     field :sample, Types::SampleType, null: true do
       description 'ID指定でサンプルを取得する'
-      argument :id, ID, required: true
-    end
-
-
-    field :sample, Types::SampleType, null: true do
-      description 'サンプルを取得する'
-      argument :id, ID, required: true
+      argument :id, ID, required: true, description: 'サンプルID'
     end
 
     def sample_connection
       Sample.all
     end
 
-    field :sample, Types::SampleType, null: true do
-      description 'ID指定でサンプルを取得する'
-      argument :id, ID, required: true
-    end
     def sample(id:)
       Sample.find(id)
     end
