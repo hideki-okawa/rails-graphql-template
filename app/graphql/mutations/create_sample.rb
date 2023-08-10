@@ -9,7 +9,7 @@ module Mutations
 
     def resolve(name:)
       sample = Sample.create!(name:)
-      { sample: sample }
+      { sample: }
     end
   end
 end
