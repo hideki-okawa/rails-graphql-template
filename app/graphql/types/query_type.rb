@@ -12,6 +12,12 @@ module Types
     end
 
     field :sample, Types::SampleType, null: true do
+      description 'ID指定でサンプルを取得する'
+      argument :id, ID, required: true
+    end
+
+
+    field :sample, Types::SampleType, null: true do
       description 'サンプルを取得する'
       argument :id, ID, required: true
     end
