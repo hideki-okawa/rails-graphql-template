@@ -6,5 +6,8 @@ module Types
     field :create_sample,
           mutation: Mutations::CreateSample,
           description: 'サンプルを作成する'
+    field :update_sample,
+          mutation: Mutations::UpdateSample,
+          description: 'サンプルを更新する'
   end
 end
