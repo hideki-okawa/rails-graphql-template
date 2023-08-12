@@ -9,7 +9,7 @@ module Mutations
 
     def resolve(id:)
       Sample.find(id).destroy!
-      { id: id }
+      { id: }
     end
   end
 end
