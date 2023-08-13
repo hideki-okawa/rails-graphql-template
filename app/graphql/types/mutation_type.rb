@@ -3,13 +3,14 @@ module Types
   class MutationType < Types::BaseObject
     description 'The mutation root of this schema'
 
-    # TODO: remove me
-    field :test_field,
-          String,
-          null: false,
-          description: 'An example field added by the generator'
-    def test_field
-      'Hello World'
-    end
+    field :create_sample,
+          mutation: Mutations::CreateSample,
+          description: 'サンプルを作成する'
+    field :delete_sample,
+          mutation: Mutations::DeleteSample,
+          description: 'サンプルを削除する'
+    field :update_sample,
+          mutation: Mutations::UpdateSample,
+          description: 'サンプルを更新する'
   end
 end

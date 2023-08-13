@@ -7,16 +7,21 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :sample_connection, Types::SampleType.connection_type, null: false do
+      description 'サンプル一覧を取得する'
+    end
 
-    # TODO: remove me
-    field :test_field,
-          String,
-          null: false,
-          description: 'An example field added by the generator'
-    def test_field
-      'Hello World!'
+    field :sample, Types::SampleType, null: true do
+      description 'ID指定でサンプルを取得する'
+      argument :id, ID, required: true, description: 'サンプルID'
+    end
+
+    def sample_connection
+      Sample.all
+    end
+
+    def sample(id:)
+      Sample.find(id)
     end
   end
 end
