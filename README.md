@@ -1,5 +1,7 @@
 # Rails GraphQL Template
 
+[![test](https://github.com/hideki-okawa/rails-graphql-template/actions/workflows/test.yml/badge.svg)](https://github.com/hideki-okawa/rails-graphql-template/actions/workflows/test.yml)
+
 Railsで GraphQL API の開発を始めるためのテンプレート。
 
 ## バージョン
