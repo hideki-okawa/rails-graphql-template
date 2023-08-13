@@ -6,6 +6,7 @@ ruby '3.2.2'
 
 gem 'bootsnap', require: false
 gem 'graphql', '~> 2.0.24'
+gem 'graphql-batch'
 gem 'jbuilder'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.6'
