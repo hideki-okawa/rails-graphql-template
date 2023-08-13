@@ -20,6 +20,9 @@ AllCops:
 Documentation:
   Enabled: false
 
+GraphQL/ObjectDescription:
+  Enabled: false
+
 Metrics/MethodLength:
   Max: 20
 
