@@ -35,6 +35,7 @@ group :test do
   gem 'shoulda-matchers', '~> 5.0'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'mysql2'
 end
 
 group :development, :test do
