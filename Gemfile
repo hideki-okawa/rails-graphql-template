@@ -31,6 +31,7 @@ end
 group :test do
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'mysql2'
   gem 'rspec-rails', '~> 6.0'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'simplecov', require: false
