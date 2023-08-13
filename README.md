@@ -1,5 +1,7 @@
 # Rails GraphQL Template
 
+Railsで GraphQL API の開発を始めるためのテンプレート。
+
 ## バージョン
 
 - Ruby: [.ruby-version](https://github.com/hideki-okawa/rails-graphql-template/blob/main/.ruby-version) に記載
@@ -20,6 +22,16 @@ $ yarn install
 
 ```shell
 $ rails s
+```
+
+## GraphQL APIを試す
+
+http://localhost:3000/graphiql
+
+## テストの実行
+
+```shell
+$ rspec
 ```
 
 ## Linterの実行
