@@ -48,4 +48,10 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+  # Bullet
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.raise = true
+  end
 end

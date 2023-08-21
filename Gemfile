@@ -40,5 +40,6 @@ group :test do
 end
 
 group :development, :test do
+  gem 'bullet'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
